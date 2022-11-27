@@ -1,0 +1,924 @@
+
+body {
+background: #fff;
+color: #666666;
+font-family: "Open Sans", sans-serif;
+margin: 0px;
+}
+
+a {
+color: #03C4EB;
+transition: 0.5s;
+}
+
+a:hover, a:active, a:focus {
+color: #03c5ec;
+outline: none;
+text-decoration: none;
+}
+
+p {
+padding: 0;
+margin: 0 0 30px 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: "Raleway", sans-serif;
+font-weight: 400;
+margin: 0 0 20px 0;
+padding: 0;
+}
+
+/* Prelaoder no se usa aun*/
+#preloader {
+position: fixed;
+left: 0;
+top: 0;
+z-index: 999;
+width: 100%;
+height: 100%;
+overflow: visible;
+background: #fff url("../img/preloader1.svg") no-repeat center center;
+}
+
+/* Back to top button no se aun jeje*/
+.back-to-top {
+position: fixed;
+display: none;
+background: rgba(0, 0, 0, 0.2);
+color: #fff;
+padding: 6px 12px 9px 12px;
+font-size: 16px;
+border-radius: 2px;
+right: 15px;
+bottom: 15px;
+transition: background 0.5s;
+}
+
+@media (max-width: 768px) {
+.back-to-top {
+    bottom: 15px;
+}
+}
+
+.back-to-top:focus {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.back-to-top:hover {
+    background: rgb(95,95,95);
+    color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+background: rgb(176, 149, 127);
+padding: 20px 0;
+height: 90px;
+}
+
+#header #logo {
+float: left;
+}
+
+#header #logo h1 {
+font-size: 36px;
+margin: 0;
+padding: 6px 0;
+line-height: 1;
+font-family: "Raleway", sans-serif;
+font-weight: 700;
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+
+#header #logo h1 a, #header #logo h1 a:hover {
+color: #fff;
+}
+
+#header #logo img {
+padding: 0;
+margin: 0;
+max-height: 50px;
+}
+
+@media (max-width: 768px) {
+#header {
+        height: 80px;
+    }
+    #header #logo h1 {
+        font-size: 26px;
+    }
+    #header #logo img {
+        max-height: 40px;
+    }
+}
+
+.is-sticky #header {
+    background: rgb(176, 149, 127);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu RESPONSIVE
+--------------------------------------------------------------*/
+/* Nav Menu Essentials */
+.nav-menu, .nav-menu * {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+
+.nav-menu ul {
+position: absolute;
+display: none;
+top: 100%;
+left: 0;
+z-index: 99;
+}
+
+.nav-menu li {
+position: relative;
+white-space: nowrap;
+}
+
+.nav-menu > li {
+float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+display: block;
+}
+
+.nav-menu ul ul {
+top: 0;
+left: 100%;
+}
+
+.nav-menu ul li {
+min-width: 180px;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+content: "\f107";
+position: absolute;
+right: 15px;
+font-family: FontAwesome;
+font-style: normal;
+font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+float: right;
+margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+#nav-menu-container {
+    display: none;
+}
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+padding: 5px 10px;
+text-decoration: none;
+display: inline-block;
+color: #fff;
+font-family: 'Raleway', sans-serif;
+font-weight: 300;
+font-size: 18px;
+outline: none;
+border-radius: 80px;
+}
+
+
+.nav-menu li a:hover {
+    color: #000000;
+    
+}
+
+.nav-menu ul {
+margin: 4px 0 0 15px;
+box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.08);
+}
+
+.nav-menu ul li {
+background: #fff;
+border-top: 1px solid #f4f4f4;
+}
+
+.nav-menu ul li:first-child {
+border-top: 0;
+}
+
+.nav-menu ul li:hover {
+background: #f6f6f6;
+}
+
+.nav-menu ul li a {
+color: #333;
+}
+
+.nav-menu ul ul {
+margin: 0;
+}
+
+/* Mobile Nav Toggle */
+#mobile-nav-toggle {
+position: fixed;
+right: 0;
+top: 0;
+z-index: 999;
+margin: 20px 20px 0 0;
+border: 0;
+background: none;
+font-size: 24px;
+display: none;
+transition: all 0.4s;
+outline: none;
+}
+
+#mobile-nav-toggle i {
+color: #fff;
+}
+
+@media (max-width: 768px) {
+#mobile-nav-toggle {
+    display: inline;
+}
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+position: fixed;
+top: 0;
+padding-top: 18px;
+bottom: 0;
+z-index: 998;
+background: rgb(176, 149, 127);
+left: -260px;
+width: 260px;
+overflow-y: auto;
+transition: 0.4s;
+}
+
+#mobile-nav ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+#mobile-nav ul li {
+position: relative;
+}
+
+#mobile-nav ul li a {
+color: #fff;
+font-size: 16px;
+overflow: hidden;
+padding: 10px 22px 10px 15px;
+position: relative;
+text-decoration: none;
+width: 100%;
+display: block;
+outline: none;
+}
+
+#mobile-nav ul li a:hover {
+color: #fff;
+}
+
+#mobile-nav ul li li {
+padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+position: absolute;
+right: 0;
+z-index: 99;
+padding: 15px;
+cursor: pointer;
+color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+color: #000000;
+}
+
+#mobile-nav ul .menu-item-active {
+color: #000000;
+}
+
+#mobile-body-overly {
+width: 100%;
+height: 100%;
+z-index: 997;
+top: 0;
+left: 0;
+position: fixed;
+background: rgba(0, 0, 0, 0.6);
+display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Sections
+--------------------------------------------------------------*/
+/* Sections Common
+--------------------------------*/
+.section-title {
+font-size: 32px;
+color: #111;
+text-transform: uppercase;
+text-align: center;
+font-weight: 700;
+}
+
+.section-description {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.section-description2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.section-title-divider {
+width: 50px;
+height: 5px;
+background: rgb(176, 149, 127);
+margin: 0 auto;
+margin-bottom: 20px;
+}
+
+.section-title-divider2 {
+    width: 100px;
+    height: .5px;
+    background: rgb(176, 149, 127);
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+    
+
+/* Gallery Section
+--------------------------------*/
+
+#photos{
+    background: rgb(106, 9, 9);
+    padding: 80px 0;    
+}
+
+#photos .pho1{
+    background-color: #2aec03;
+    padding: 80px 0;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#photos .pho2{
+    background-color: #2aec03;
+    padding: 80px 0;
+    margin-bottom: 30px;
+}
+
+#photos .pho3{
+    background-color: #2aec03;
+    padding: 80px 0;
+    margin-bottom: 30px;
+}
+
+#photos .pho4{
+    background-color: #2aec03;
+    padding: 80px 0;
+    margin-bottom: 30px;
+}
+
+/*----------------------------------------------------------------------------*/
+    
+    /* Gallery Section
+    --------------------------------*/
+    #team {
+    background: #fff;
+    padding: 80px 0 60px 0;
+    
+    }
+    
+    #team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    #team .member .pic {
+    margin-bottom: -30px;
+    overflow: hidden;
+    height: 260px;
+    }
+
+    @media  screen and (min-width: 400px) and (max-width: 992px) {
+        #team .member .pic {
+            margin-bottom: 20px;
+            overflow: hidden;
+            height: 260px;
+            }
+    }
+
+    @media  screen and (min-width: 200px) and (max-width: 400px) {
+        #team .member .pic {
+            margin-bottom: 1px;
+            overflow: hidden;
+            height: 260px;
+            }
+    }
+
+    #team .member .pic img {
+    max-width: 100%;
+    margin-bottom: -650px;
+    margin-top: -480px;
+    border-radius: 20px;
+    }
+    
+    #team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    }
+    
+    #team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+ 
+    }
+
+    #team .section-description{
+        font-size: 20px;
+    }
+
+    /* Recomendaciones Section
+
+  --------------------------------*/
+
+  .spac{
+    background-color: #f6f6f6;
+    color: #f6f6f6;
+  }
+
+  #testimonials {
+    background: #f6f6f6;
+    padding: 80px 0;
+  }
+  
+  #testimonials .profile {
+    text-align: center;
+  }
+  
+  #testimonials .col-md-9{
+    background-color: #f6f6f6;
+    width: 100%; 
+  }
+
+ .vid{
+    width: 100%;
+    height: 100%; 
+    margin: 25px;
+}
+
+.vid2{
+    width: 100%;
+    height: 100%; 
+    margin: 5px;
+}
+
+  #testimonials .pic {
+    margin-bottom: 1px;
+    overflow: hidden;
+    height: 240px;
+    width: 420px;
+    float: left;
+  }
+
+  #testimonials .pic2 {  
+    margin-bottom: 1px;
+    overflow: hidden;
+    height: 240px;
+    width: 420px;
+    float: right;
+  }
+  
+  #testimonials .profile h4 {
+    font-weight: 700;
+    color: #03C4EB;
+    margin-bottom: 5px;
+  }
+  
+  #testimonials .profile span {
+    color: #333333;
+  }
+  
+  #testimonials .quote {
+    position: relative;
+    background: #fff;
+    padding: 53px;
+    margin-top: 1px;
+    font-size: 16px;
+    font-style: italic;
+    border-radius: 5px;
+    width: 60%;
+    float: right;
+    margin: 5px;  
+  }
+
+  #testimonials .quote2 {
+    position: relative;
+    background: #fff;
+    padding: 53px;
+    margin-top: 1px;
+    font-size: 16px;
+    font-style: italic;
+    border-radius: 5px;
+    width: 60%;
+    float: left;
+    margin: 5px;
+  }
+  
+ 
+  
+  #testimonials .quote small {
+    display: inline-block;
+    right: -9px;
+    position: relative;
+    top: 4px;
+  }
+
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    
+    .section-title{
+        font-size: 30px;
+    }
+
+    .section-description2{
+        font-size: 20px;
+    }
+
+    #testimonials .quote {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 50%;
+        float: right;
+        margin: 5px;  
+      }
+    
+      #testimonials .quote2 {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 50%;
+        float: left;
+        margin: 5px;
+      }
+
+    #testimonials.vid{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+        
+    }
+    
+    #testimonials.vid2{
+        width: 100%;
+        height: 100%; 
+        margin: 3px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+    .section-title{
+        font-size: 28px;
+    }
+
+    .section-description2{
+        font-size: 18px;
+    }
+
+    #testimonials .quote {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 40%;
+        float: right;
+        margin: 5px;  
+      }
+    
+      #testimonials .quote2 {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 40%;
+        float: left;
+        margin: 5px;
+      }
+
+    #testimonials .pic {
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 240px;
+        width: 420px;
+        float: left;
+    }
+
+    #testimonials .pic2 {  
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 240px;
+        width: 420px;
+        float: right;
+        margin-top: 40px;
+    }
+
+    #testimonials .vid{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+        
+    }
+    
+    #testimonials .vid2{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+
+    .section-title{
+        font-size: 26px;
+    }
+
+    .section-description2{
+        font-size: 16px;
+    }
+
+    #testimonials .quote {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 14px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px;  
+      }
+    
+      #testimonials .quote2 {
+        position: relative;
+        background: #fff;
+        padding: 50px;
+        margin-top: 1px;
+        font-size: 14px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px; 
+      }
+
+    #testimonials .pic {
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 240px;
+        width: 420px;
+        float: left;
+        
+    }
+
+    #testimonials .pic2 {  
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 240px;
+        width: 420px;
+        float: right;
+        margin-top: 40px;
+        margin-right: 10px;
+    }
+
+    #testimonials .vid{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+    
+    #testimonials .vid2{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+
+}
+
+@media screen and (min-width: 372px) and (max-width: 500px) {
+
+    .section-title{
+        font-size: 23px;
+    }
+
+    .section-description2{
+        font-size: 18px;
+    }
+
+    #testimonials .quote {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px;  
+      }
+    
+      #testimonials .quote2 {
+        position: relative;
+        background: #fff;
+        padding: 40px;
+        margin-top: 1px;
+        font-size: 12px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px; 
+      }
+
+    #testimonials .pic {
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 180px;
+        width: 350px;
+        float: left;
+        
+    }
+
+    #testimonials .pic2 {  
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 180px;
+        width: 350px;
+        float: right;
+        margin-top: 40px;
+        margin-right: 15px;
+    }
+
+    #testimonials .vid{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+    
+    #testimonials .vid2{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+
+}
+
+@media screen and (max-width: 372px) {
+
+    .section-title{
+        font-size: 22px;
+    }
+
+    .section-description2{
+        font-size: 16px;
+    }
+
+    #testimonials .quote {
+        position: relative;
+        background: #fff;
+        padding: 35px;
+        margin-top: 1px;
+        font-size: 11px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px;  
+      }
+    
+      #testimonials .quote2 {
+        position: relative;
+        background: #fff;
+        padding: 35px;
+        margin-top: 1px;
+        font-size: 11px;
+        font-style: italic;
+        border-radius: 5px;
+        width: 95%; 
+        margin: 15px; 
+      }
+
+    #testimonials .pic {
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 130px;
+        width: 240px;
+        float: left;
+        
+    }
+
+    #testimonials .pic2 {  
+        margin-bottom: 1px;
+        overflow: hidden;
+        height: 130px;
+        width: 240px;
+        float: right;
+        margin-top: 40px;
+        margin-right: 15px;
+    }
+
+    #testimonials .vid{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+    
+    #testimonials .vid2{
+        width: 100%;
+        height: 100%; 
+        margin: 10px;
+    }
+}
+    
+    /*--------------------------------------------------------------
+    # Footer
+    --------------------------------------------------------------*/
+    #footer {
+    background: rgb(44, 44, 44);
+    padding: 30px 0;
+    color: #fff;
+    }
+    
+    #footer .copyright {
+    text-align: center;
+    }
+    
+    #footer .credits {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+    }
+
+::-webkit-scrollbar {
+    display: none;
+}
